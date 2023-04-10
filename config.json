@@ -1,4 +1,5 @@
 {
+    "data": "20230324_sorted_timed_evening.csv",
     "features": [],
     "window_size": 5,
     "validation_loop": 20
