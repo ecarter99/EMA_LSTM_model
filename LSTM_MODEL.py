@@ -313,7 +313,6 @@ plt.xlabel("Permutations")
 plt.ylabel("Accuracy")
 mean_accuracy = numpy.mean(accuracies)
 plt.text(1.15, mean_accuracy, f"Mean: {mean_accuracy:.2f}", fontsize=12)
-plt.show()
 
 plt.savefig('output/' + timestamp_str + '_boxplot.png')
 output_frame.to_csv('output/' + timestamp_str + '_run_data.csv')
