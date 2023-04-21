@@ -7,6 +7,7 @@
 4. Clone the repository using the following command:
 ```
 git clone https://github.com/ecarter99/EMA_LSTM_model.git
+cd EMA_LSTM_model
 ```
 5. Setup the environment using the following command:
 ```
