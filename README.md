@@ -3,11 +3,15 @@
 ## Preparation
 1. Setup Anaconda https://docs.anaconda.com/free/anaconda/install/
 2. Navigate to the Directory where you want to run the models in your terminal/commandline
-2. Setup the environment using the following command:
-	<insert command here (mac vs wind?)>
-3. Setup Git on your system
+3. Setup Git on your system https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 4. Clone the repository using the following command:
-	<isert command?
+'''
+git clone https://github.com/ecarter99/EMA_LSTM_model.git
+'''
+5. Setup the environment using the following command:
+```
+conda create --name LSTM_ENV --file environment.txt
+```
 
 ## Description
 LSTM (Long Short-Term Memory) is a type of neural network designed for sequential data like time series, speech, and text. It's capable of selectively retaining and forgetting information from past inputs, allowing it to learn patterns and make predictions over long time horizons. The following LSTM has been tuned to predict whether or not a participant of the EMA study will be suicidal on a given day. 
