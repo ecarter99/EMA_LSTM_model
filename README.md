@@ -24,12 +24,12 @@ LSTM (Long Short-Term Memory) is a type of neural network designed for sequentia
 ## Model Process
 
 ## Config
-'''
+```
 Data: Path to CSV to train on.
 Features: List of features used by the model. Adjust this file to experiment with different combinations of features to judge accuracy.
 Window_Size: Number of days the sliding window uses to gather data for its predictions. Originally set and tested at 5 days.
 Validation_Loop: Number of times the validation loop randomly assigns the participants as training and validation and reruns the model. 
-'''
+```
 ## Dependencies
 1. Anaconda
 2. Git
