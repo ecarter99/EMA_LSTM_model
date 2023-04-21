@@ -5,9 +5,9 @@
 2. Navigate to the Directory where you want to run the models in your terminal/commandline
 3. Setup Git on your system https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 4. Clone the repository using the following command:
-'''
+```
 git clone https://github.com/ecarter99/EMA_LSTM_model.git
-'''
+```
 5. Setup the environment using the following command:
 ```
 conda create --name LSTM_ENV --file environment.txt
