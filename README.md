@@ -15,7 +15,6 @@ LSTM (Long Short-Term Memory) is a type of neural network designed for sequentia
 ## Model Process
 
 ## Config
-'''
 Data: Path to CSV to train on.
 Features: List of features used by the model. Adjust this file to experiment with different combinations of features to judge accuracy.
 Window_Size: Number of days the sliding window uses to gather data for its predictions. Originally set and tested at 5 days.
@@ -33,6 +32,6 @@ There are some limitations on what can be included and what should not be exclud
 1. Single Box Plot for the run
 2. Statistics for the run saved in a CSV
 
-<div style="background-color: lightgrey; padding: 10px;">
+'''
 This is a grey box text block.
-</div>
+'''
