@@ -12,6 +12,10 @@ git clone https://github.com/ecarter99/EMA_LSTM_model.git
 ```
 conda create --name LSTM_ENV --file environment.txt
 ```
+6. Activate the environment (if you exit the terminal or anything resets you'll have to activate when you come back. The command is the same each time - when activated, the terminal will show (LSTM_ENV) before the line you're working on)
+```
+conda activate LSTM_ENV
+```
 
 ## Running Model
 ```
