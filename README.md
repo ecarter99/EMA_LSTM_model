@@ -26,7 +26,25 @@ python LSTM_MODEL.py
 ## Description
 LSTM (Long Short-Term Memory) is a type of neural network designed for sequential data like time series, speech, and text. It's capable of selectively retaining and forgetting information from past inputs, allowing it to learn patterns and make predictions over long time horizons. The following LSTM has been tuned to predict whether or not a participant of the EMA study will be suicidal on a given day. 
 
+## Data Cleaning
+
+All the data cleaning for this model is performed in the preprocess_encodings() function. The function pulls out the relevant features to use for the model and drops rows with null values. Categorical features using 'yes' or 'no' are changed to 1, 0. Participant groups are onehot encoded and finally the data is reshaped to fit the needs of the PyTorch LSTM model requirements.
+
+Currently the model is tuned for evening surveys. Future work would be to fit it for the entire set of surveys and other data.
+
 ## Model Process
+This LSTM relies on PyTorch neural-network (nn) libraries. The parameters for the neural network are as follows but can be adjusted and tuned:
+```
+hidden_layer_size = 128
+num_layers = 1
+bidirectional = True
+p_dropout = 0
+```
+Some tuning of these would be recommended.
+
+The default collate function was overridden to oversample suicidal days since our data has a heavy skew towards the non-suicidal target. This oversampling was implimented in each minibatch by randomly splitting the batch in half and overfitting on of the halves to suicidal and the other to suicidal days. To see specifically how this was implimented, reference the custom_collate_fn() in the code.
+
+Validation was performed via a custom cross-validation method. Over 20 iterations (can be adjusted using the config), 3 participants are chosen at random to be witheld from model training to be used for validation. Accuracies are reported for each iteration in the results and the average accuracy is reported in a boxplot also in the output.
 
 ## Config
 ```
@@ -41,7 +59,7 @@ Validation_Loop: Number of times the validation loop randomly assigns the partic
 3. A full list of dependencies can be found in the environment.txt file used to setup the conda environment
 
 ## Features
-There are some limitations on what can be included and what should not be excluded using the config. I plan to try to clear up as many discrepancies here as possible.
+** Features included can be found in the script in the preprocess_encodings() function ** future work would be to include the option to adjust which features to use in the config file
 
 ## Output
 All output can be found in the output/ directory. Each run is specified by the timestamp at which the model was executed. 
