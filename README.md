@@ -67,3 +67,7 @@ All output can be found in the output/ directory. Each run is specified by the t
 1. Single Box Plot for the run
 2. Statistics for the run saved in a CSV
 
+## Results
+Baseline accuracy for the model is 50%. This figure comes from the overfitting process used above where half of the data represented is non-suicidal and the other half is. 
+
+From the output, we find that the accuracy averages aboud 80% (depending on your run - and also tuning to be performed). This 30% in accuracy greater than the baseline tells us that the features in the dataset have predictive power. Some runs perform higher and others lower which could be analyzed further, but it is very insightful that such an improved prediction can be achieved with this LSTM.
